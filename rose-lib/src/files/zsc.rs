@@ -42,8 +42,8 @@ impl RoseFile for Scene {
             mat.two_sided = reader.read_bool16()?;
             mat.alpha_test_enabled = reader.read_bool16()?;
             mat.alpha_ref = reader.read_u16()?;
-            mat.z_write_enabled = reader.read_bool16()?;
             mat.z_test_enabled = reader.read_bool16()?;
+            mat.z_write_enabled = reader.read_bool16()?;
             mat.blend_mode = SceneBlendMode::try_from(reader.read_u16()?)?;
             mat.specular_enabled = reader.read_bool16()?;
             mat.alpha = reader.read_f32()?;
