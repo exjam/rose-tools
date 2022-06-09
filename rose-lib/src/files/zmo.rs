@@ -54,7 +54,7 @@ impl RoseFile for Motion {
                     }
                     ChannelType::Rotation => {
                         let v = channel.rotation_frames().unwrap();
-                        v.push(reader.read_quaternion()?);
+                        v.push(reader.read_quaternion_wxyz()?);
                     }
                     ChannelType::Normal => {
                         let v = channel.normal_frames().unwrap();
@@ -117,7 +117,7 @@ impl RoseFile for Motion {
                     }
                     ChannelType::Rotation => {
                         let q = channel.rotation_frames().unwrap()[i];
-                        writer.write_quaternion(&q)?;
+                        writer.write_quaternion_wxyz(&q)?;
                     }
                     ChannelType::Normal => {
                         let v = channel.normal_frames().unwrap()[i];
