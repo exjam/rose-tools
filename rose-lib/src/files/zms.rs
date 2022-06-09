@@ -376,8 +376,8 @@ impl RoseFile for Mesh {
 impl Default for Mesh {
     fn default() -> Mesh {
         Mesh {
-            identifier: String::from(""),
-            format: -1,
+            identifier: String::from("ZMS0008"),
+            format: 0,
             bounding_box: BoundingBox {
                 min: Vector3::<f32>::new(),
                 max: Vector3::<f32>::new(),
