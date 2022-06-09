@@ -83,6 +83,9 @@ impl Mesh {
         for i in 0..vert_count as usize {
             let _index = reader.read_u32()?;
             self.vertices[i].position = reader.read_vector3_f32()?;
+            self.vertices[i].position.x /= 100.0;
+            self.vertices[i].position.y /= 100.0;
+            self.vertices[i].position.z /= 100.0;
         }
 
         if self.normals_enabled() {
